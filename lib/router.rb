@@ -135,7 +135,7 @@ EM.run do
   # is available inside NATS itself.
   begin
     sv, $-v = $-v, nil
-    NATS::MAX_RECONNECT_ATTEMPTS = 150 # 5 minutes total
+    NATS::MAX_RECONNECT_ATTEMPTS = 3600 # 5 minutes total
     NATS::RECONNECT_TIME_WAIT    = 2   # 2 secs
     $-v = sv
   end
